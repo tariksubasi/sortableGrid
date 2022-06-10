@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="mendix.sortablegrid.SortableGrid"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Sortable Grid</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="Machines">
+            <property key="machineData" type="datasource" isList="true" required="false">
+                <caption>Machine Data</caption>
+                <description>Bunch of machines</description>
+            </property>
+
+            <property key="machineId" type="attribute" dataSource="machineData" required="false">
+                <caption>machineId</caption>
+                <description>machineId</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="machineName" type="attribute" dataSource="machineData" required="false">
+                <caption>machineName</caption>
+                <description>machineName</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="machineDescription" type="attribute" dataSource="machineData" required="false">
+                <caption>machineDescription</caption>
+                <description>machineDescription</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="machineSort" type="attribute" dataSource="machineData" required="false">
+                <caption>machineSort</caption>
+                <description>machineSort</description>
+                <attributeTypes>
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+
+            <property key="onSortMachines" type="action">
+                <caption>onSortMachines</caption>
+                <description>Action to sort machines</description>
+            </property>
+        </propertyGroup>
+
+        <propertyGroup caption="MachineHelper">
+            <property key="draggedMachineId" type="attribute" required="false">
+                <caption>draggedMachineId</caption>
+                <description>draggedMachineId</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+
+            <property key="droppedOverMachineId" type="attribute" required="false">
+                <caption>droppedOverMachineId</caption>
+                <description>droppedOverMachineId</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

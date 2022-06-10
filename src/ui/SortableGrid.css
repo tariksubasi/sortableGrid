@@ -1,0 +1,51 @@
+/*
+Place your custom CSS here
+*/
+
+.sortable-grid-wrapper {
+    padding: 3%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.list {
+    user-select: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16px;
+}
+
+.item {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 275px;
+    cursor: grab;
+    color: #000000;
+    cursor: grab;
+    font-size: 20px;
+    user-select: none;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dragged {
+    background-color: rgb(37, 37, 197);
+}
+@media (min-width: 600px) {
+    .list {
+        grid-gap: 24px;
+    }
+}
+
+.item-name {
+}
+
+.item-sort {
+    font-weight: bold;
+    color: rgb(225, 72, 72);
+}
+
+.item-desc {
+    color: #ccc8c8;
+}
